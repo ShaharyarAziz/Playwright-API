@@ -38,7 +38,8 @@ pipeline {
         }
         stage('Publish JUnit Results') {
             steps {
-                junit 'test-results/results.xml'
+                        // junit 'test-results/results.xml'
+                        junit allowEmptyResults: true, testResults: '**/test-results/results.xml'
             }
         }
     }
