@@ -20,7 +20,7 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                bat 'npx playwright test --reporter=html,junit --output=test-results'
+                bat 'npx playwright test --reporter=html,junit=test-results/results.xml'
             }
         }
 
