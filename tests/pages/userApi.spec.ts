@@ -36,7 +36,7 @@ test.describe('User API Testing', () => {
     const response = await request.post(`${url}/accounts/login`, {
       data: payload,
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json' 
       }
     });
     expect(response.status()).toBe(200);
