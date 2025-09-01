@@ -20,7 +20,7 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                bat 'npx playwright test --reporter=html'
+                bat 'npx playwright test --reporter=html,junit'
             }
         }
 
@@ -36,11 +36,7 @@ pipeline {
                 ])
             }
         }
-        stage('Publish JUnit Results') {
-            steps {
-                junit 'test-results/*.xml'
-            }
-        }
+        
     }
 
     post {
