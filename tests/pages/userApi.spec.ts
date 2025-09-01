@@ -9,7 +9,7 @@ test.describe('User API Testing', () => {
       last_name: "ahmad",
       email: `testuser${randomNum}@gmail.com`,
       phone: `+9230012345${randomNum}`,
-      user_type: "client",
+      user_type: "client", 
       password: "test1234",
       device_token: "device_token"
     }
@@ -26,7 +26,7 @@ test.describe('User API Testing', () => {
     });
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
-    console.log("📌 Login API Response:", responseBody);
+    console.log("Login API Response:", responseBody);
   })
   test('Login Users', async ({ request }) => {
     const payload = {
