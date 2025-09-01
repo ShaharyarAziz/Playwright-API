@@ -36,6 +36,11 @@ pipeline {
                 ])
             }
         }
+        stage('Publish JUnit Results') {
+            steps {
+                junit 'test-results/*.xml'
+            }
+        }
     }
 
     post {
