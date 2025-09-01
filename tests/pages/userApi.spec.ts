@@ -38,7 +38,7 @@ test.describe('User API Testing', () => {
       headers: {
         'Content-Type': 'application/json' 
       }
-    });
+    }); 
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
     console.log("📌 Login API Response:", responseBody);
