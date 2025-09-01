@@ -29,7 +29,7 @@ test.describe('User API Testing', () => {
     console.log("Login API Response:", responseBody);
   })
   test('Login Users', async ({ request }) => {
-    const payload = {
+    const payload = { 
       email: "testuser13@gmail.com",
       password: "test1234"
     }
